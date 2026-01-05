@@ -2,6 +2,11 @@
 	--breadcrumb-font-size : 15px;
 }
 
+@media (max-width: 992px) {
+	.container-header .grid-child {
+		padding: 0.1em !important;
+	}
+}
 
 @media (min-width: 1200px) {
 	.navbar-expand-lg .navbar-collapse .container-header .navbar-brand {
@@ -13,6 +18,12 @@
 	.container-header .navbar-brand {
 		margin-left: 10px;
 	}
+	.container-header {
+		background: #fafafa url('http://images.jltryoen.fr/headbg.jpg') top left no-repeat fixed !important;
+	}
+
+
+
 }
 
 body.site, div.site-grid {
@@ -38,22 +49,27 @@ li.metismenu-item > a {
 	color: #145889 !important; 
 	font-weight: 500 !important;
 }
+.container-header .metismenu > li > a::after, .container-header .metismenu > li > button::before {
+	opacity: .8;
+	height: 3px;
+}
+
 
 .metismenu.mod-menu .metismenu-item {
 	align-items: center;
 	padding: .5em .5em;
 }
 .metismenu.mod-menu .mm-toggler::after {
-	content: "";
 	border-top: .4em solid;
 	border-left: .4em solid #0000;
 	border-right: .4em solid #0000;
-	width: 0;
-	height: 0;
 	margin-inline-start: .2em;
 	transition: all .3s ease-out;
 }
 
+ul.nav-tabs > .metismenu-item.active > a {
+	background: color-mix(in srgb,currentColor,#fff 50%);
+}
 
 .container-header .navbar-toggler {
   color: #000!important;
@@ -195,5 +211,34 @@ div.mw-geshi, div.syntaxhighlighter {
 .btn-info {
 	background-color: #138496;
 	border-color: #117a8b;
+}
+
+
+
+@media (min-width: 992px) {
+  .offcanvas-start {
+    width: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .offcanvas .metismenu.mod-menu .metismenu-item > ul {
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .offcanvas .metismenu.mod-menu .mm-collapse {
+    background-color: transparent;
+  }
+  .offcanvas .metismenu.mod-menu .metismenu-item > a {
+    color: #fff;
+  }
+  [id*="nav"] {
+	transition: 0.8s ease;
+	background-color: var(--headerbg);
+  }
+  
+}
+.offcanvas-header > *:only-child {
+  margin-left: auto;
 }
 
