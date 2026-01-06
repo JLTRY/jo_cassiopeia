@@ -40,5 +40,6 @@ $wa->registerAndUseStyle('colors_custom', 'global/colors.css')
         --h3size: ' . $this->params->get('h3size') . 'rem;
         --breadcrumb-font-size : ' . $this->params->get('breadcrumb-font-size') . 'rem;
     }')
-    ->UseStyle('template.jo_cassiopeia.typography');;
+    ->UseStyle('template.jo_cassiopeia.typography')
+    ->UseStyle('template.jo_cassiopeia');
 

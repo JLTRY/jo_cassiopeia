@@ -1,0 +1,71 @@
+
+/* plugin Table of content ck */
+.table-of-contents-ck-wrap {
+	border-style: dotted;
+	border-width: 1px;
+	position: absolute;
+	right: 20%;
+	top: 10%;
+	z-index: 2000;
+	border: 1px solid #a2a9b1;
+	background-color: #f8f9fa;
+	padding: 5px;
+	font-size: 95%;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Styles pour les appareils mobiles */
+  .table-of-contents-ck-wrap {
+	  visibility: hidden;
+  }
+}
+
+/* plugin Slideshow CK */
+.slideshowck {
+	padding-top: 30px!important;
+}
+
+/* SchuWeb_Sitemap component*/
+#xmap ul,
+#xmap li,
+#SchuWeb_Sitemap ul,
+#SchuWeb_Sitemap li
+{	
+	list-style: none;
+}
+
+
+#xmap a,
+#SchuWeb_Sitemap a
+{
+	background: transparent url(/images/world_link.png) center left no-repeat;
+	padding-left: 20px;
+	background-size:16px;
+	display: inline-block;
+}
+
+
+/* JComment component*/
+.comments-link,a.comments-link  {
+	background-image: url("../images/comment.png") !important;
+	background-position: 0px, 0px!important;
+	background-repeat: no-repeat;
+	padding: 30px 2px 20px 50px !important;
+	display:block;
+}
+
+.comments-readmore {
+	padding-left: 0px!important;
+	margin-left : -5px;
+}
+
+
+
+/* geshi plugin */
+div.mw-geshi, div.syntaxhighlighter {
+	border: 1px dashed #2F6FAB!important;
+	margin:  5px;
+	padding: 5px;
+	background-color: #FFFFFF !important!important;
+	font-size: 11px !important;
+}

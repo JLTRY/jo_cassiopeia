@@ -13,7 +13,7 @@
   color: var(--headercolor);
 }
 
-.container-header .metismenu > li > a:hover:after, .container-header .metismenu > li > button:hover:before, .container-header .metismenu > li.active > a:after, .container-header .metismenu > li.active > button:before {
+.container-header .metismenu > li > a:hover:after, .container-header .metismenu > li > button:hover:before, .container-header .metismenu > li.active > a:after{
   background: color-mix(in srgb, currentColor, #fff 25%);
 }
 

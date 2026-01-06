@@ -5,10 +5,15 @@
   "description": "This file contains details of the assets used by Cassiopeia, the default Joomla site template.",
   "license": "GPL-2.0-or-later",
   "assets": [
-        {
+    {
       "name": "template.jo_cassiopeia.typography",
       "type": "style",
       "uri": "jcktypography/typography.min.css"
+    },
+    {
+      "name": "template.jo_cassiopeia",
+      "type": "style",
+      "uri": "jo_cassiopeia.css"
     }
   ]
 }
