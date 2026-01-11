@@ -17,6 +17,8 @@
   background: color-mix(in srgb, currentColor, #fff 25%);
 }
 
+
+
 a:focus-visible, .metismenu.mod-menu .metismenu-item > a:focus, .metismenu.mod-menu .metismenu-item > button:focus {
   outline-offset: 2px;
   outline: 2px solid;
@@ -37,10 +39,10 @@ a:focus-visible, .metismenu.mod-menu .metismenu-item > a:focus, .metismenu.mod-m
   --btn-color: var(--btncolor);
   --btn-bg: var(--btnbg);
   --btn-border-color: var(--btnbg);
-  --btn-hover-color: var(--btncolor);
+  --btn-hover-color: var(--btncolorh);
   --btn-hover-bg: var(--btnbgh);
   --btn-hover-border-color: var(--btnbgh);
-  --btn-active-color: var(--btncolor);
+  --btn-active-color: var(--btncolorh);
   --btn-active-bg: var(--btnbgh);
   --btn-active-border-color: var(--btnbgh);
   --btn-disabled-color: var(--btncolor);
@@ -84,3 +86,41 @@ a:focus-visible, .metismenu.mod-menu .metismenu-item > a:focus, .metismenu.mod-m
   background-color: var(--headerbg);
   background-image: none;
 }
+
+
+
+/* added to cassiopeia_ext */
+.container-header .navbar-toggler {
+  color: var(--bodycolor) !important;
+}
+
+ul.nav-tabs > .metismenu-item.active > a {
+	background: color-mix(in srgb,currentColor,#fff 50%);
+}
+
+li.metismenu-item > a {
+	color: var(--link-color) !important; 
+	font-weight: 500 !important;
+}
+@media (width >= 992px) {
+  .container-header li.metismenu-item > a:hover {
+    color: var(--link-hover-color)!important;
+  }
+}
+
+.btn-info {
+	background-color: #138496;
+	border-color: #117a8b;
+}
+
+
+.btn-secondary {
+	background-color: rgb(92, 99, 106);
+	color : rgb(255, 255, 255)
+}
+.btn-secondary:hover {
+	color: #fff;
+	background-color: #5c636a;
+	border-color: #565e64;
+}
+/* end added to cassiopeia_ext */

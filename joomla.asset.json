@@ -14,6 +14,14 @@
       "name": "template.jo_cassiopeia",
       "type": "style",
       "uri": "jo_cassiopeia.css"
+    },
+    {
+      "name": "template.jo_cassiopeia",
+      "type": "script",
+       "uri": "metismenu.js",
+      "dependencies": [
+        "bootstrap.dropdown"
+      ]
     }
   ]
 }

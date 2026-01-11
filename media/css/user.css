@@ -47,7 +47,7 @@
 
 /* JComment component*/
 .comments-link,a.comments-link  {
-	background-image: url("../images/comment.png") !important;
+	background-image: url("/images/comment.png") !important;
 	background-position: 0px, 0px!important;
 	background-repeat: no-repeat;
 	padding: 30px 2px 20px 50px !important;

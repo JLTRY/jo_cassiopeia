@@ -20,6 +20,7 @@
 	</files>
 	<media destination="templates/site/jo_cassiopeia" folder="media">
 		<folder>css</folder>
+		<folder>js</folder>
 	</media>
 	<positions>
 		<position>topbar</position>

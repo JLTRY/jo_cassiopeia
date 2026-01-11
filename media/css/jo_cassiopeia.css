@@ -8,29 +8,26 @@
 	div.com-content-article, div.item-content, div.blog-items {
 		margin-left : 10px;
 	}
-	.container-header .navbar-brand {
-		margin-left: 10px;
+	.container-header .navbar-brand , ul.nav-tabs{
+		margin-left: 10px!important;
 	}
 	.container-header {
 		background: #fafafa url('http://images.jltryoen.fr/headbg.jpg') top left no-repeat fixed !important;
 	}
 }
 
-
-
 li.metismenu-item {
   font-size : 1em !important;
 }
 
-li.metismenu-item > a {
-	color: var(--link-color) !important; 
-	font-weight: 500 !important;
+ul.nav-tabs > li.metismenu-item {
+	display: inline !important;
 }
+
 .container-header .metismenu > li > a::after, .container-header .metismenu > li > button::before {
 	opacity: .8;
 	height: 3px;
 }
-
 
 .metismenu.mod-menu .metismenu-item {
 	align-items: center;
@@ -42,14 +39,6 @@ li.metismenu-item > a {
 	border-right: .4em solid #0000;
 	margin-inline-start: .2em;
 	transition: all .3s ease-out;
-}
-
-ul.nav-tabs > .metismenu-item.active > a {
-	background: color-mix(in srgb,currentColor,#fff 50%);
-}
-
-.container-header .navbar-toggler {
-  color: #000!important;
 }
 
 .site-grid > .full-width {
@@ -65,9 +54,6 @@ a
 	text-decoration: none!important;
 }
 
-
-
-
 .column-1, .column-2
 {
 	border:solid 1px #ddd;
@@ -81,44 +67,6 @@ a
 	padding-left: 15px;
 	padding-bottom: 15px;
 	padding-top: 10px;
-}
-
-h1 {
-	border-bottom: none!important;
-	font-weight: 600!important;
-}
-h2 {
-	line-height: 34px!important;
-	border-bottom: 1px solid #a2a9b1 !important;
-	font-weight: 600!important;
-}
-
-
-h3 {
-	line-height: 20px;
-	border-bottom: none!important;
-	font-weight: 600!important;
-}
-
-h4 {
-	font-size :14px! important;
-	font-weight: 600!important;
-}
-
-h5 {
-	font-size :12px! important;
-	font-weight: 600!important;
-}
-
-
-h4, h5, h6 {
-	border-bottom: none !important;
-	margin: 8px 0 6px 0!important;
-}
-
-.btn-info {
-	background-color: #138496;
-	border-color: #117a8b;
 }
 
 
@@ -149,7 +97,7 @@ h4, h5, h6 {
 .offcanvas-header > *:only-child {
   margin-left: auto;
 }
-
+/* end of Offcanvas overwrite */
 
 
 
