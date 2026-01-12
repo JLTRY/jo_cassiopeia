@@ -108,19 +108,29 @@ li.metismenu-item > a {
   }
 }
 
+
 .btn-info {
-	background-color: #138496;
-	border-color: #117a8b;
+  background-color: var(--btninfobg);
+  border-color: var(--btninfobg);
+  color: var(--btninfocolor);
 }
 
+.btn-info:hover, .btn-info:focus {
+  background-color: var(--btninfobgh);
+  border-color: var(--btninfobgh);
+  color: var(--btninfocolorh);
+}
 
 .btn-secondary {
-	background-color: rgb(92, 99, 106);
-	color : rgb(255, 255, 255)
+  background-color: var(--btnsecondarybg);
+  border-color: var(--btnsecondarybg);
+  color: var(--btnsecondarycolor);
 }
+
 .btn-secondary:hover {
-	color: #fff;
-	background-color: #5c636a;
-	border-color: #565e64;
+  background-color: var(--btnsecondaybgh);
+  border-color: var(--btnsecondarybgh);
+  color: var(--btnsecondarycolorh);
 }
+
 /* end added to cassiopeia_ext */

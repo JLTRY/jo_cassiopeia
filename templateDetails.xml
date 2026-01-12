@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="template" client="site" method="upgrade">
 	<name>jo_cassiopeia</name>
-	<version>1.0</version>
+	<version>1.0.1</version>
 	<creationDate>December 2025</creationDate>
 	<author>JL TRYOEN</author>
 	<authorEmail>postmaster@jltryoen.fr</authorEmail>
@@ -44,8 +44,8 @@
 		<position>error-404</position>
 	</positions>
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.tpl_jo_cassiopeia.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_jo_cassiopeia.sys.ini</language>
+		<language tag="en-GB">en-GB/tpl_jo_cassiopeia.ini</language>
+		<language tag="en-GB">en-GB/tpl_jo_cassiopeia.sys.ini</language>
 	</languages>
 	<updateservers>
        <server type="extension" priority="1" name="JO's Template">https://raw.githubusercontent.com/JLTRY/jo_cassiopeia/master/tmpl_jo_cassiopeia-update.xml</server>
@@ -221,7 +221,76 @@
 					format="rgb"
 					label="TPL_CASSIOPEIA_BUTTON_HOVER_COLOR_LABEL"
 				/>
+				<field
+					name="btninfobg"
+					type="color"
+					parentclass="span-3-inline stack"
+					default="rgb(19, 132, 150)"
+					format="rgb"
+					label="TPL_CASSIOPEIA_BUTTON_INFO_BACKGROUND_COLOR_LABEL"
+				/>
 
+				<field
+					name="btninfobgh"
+					type="color"
+					parentclass="span-3-inline stack"
+					default="rgb(14, 59, 67)"
+					format="rgb"
+					label="TPL_CASSIOPEIA_BUTTON_INFO_BACKGROUND_HOVER_COLOR_LABEL"
+				/>
+
+				<field
+					name="btninfocolor"
+					type="color"
+					parentclass="span-3-inline stack"
+					default="rgb(254, 254, 254)"
+					format="rgb"
+					label="TPL_CASSIOPEIA_BUTTON_INFO_COLOR_LABEL"
+				/>
+
+				<field
+					name="btninfocolorh"
+					type="color"
+					parentclass="span-3-inline stack"
+					default="rgb(254, 254, 254)"
+					format="rgb"
+					label="TPL_CASSIOPEIA_BUTTON_INFO_HOVER_COLOR_LABEL"
+				/>
+				<field
+					name="btnsecondarybg"
+					type="color"
+					parentclass="span-3-inline stack"
+					default="rgb(92, 99, 106)"
+					format="rgb"
+					label="TPL_CASSIOPEIA_BUTTON_SECONDARY_BACKGROUND_COLOR_LABEL"
+				/>
+
+				<field
+					name="btnsecondarybgh"
+					type="color"
+					parentclass="span-3-inline stack"
+					default="rgb(92, 99, 106)"
+					format="rgb"
+					label="TPL_CASSIOPEIA_BUTTON_SECONDARY_BACKGROUND_HOVER_COLOR_LABEL"
+				/>
+
+				<field
+					name="btnsecondarycolor"
+					type="color"
+					parentclass="span-3-inline stack"
+					default="rgb(254, 254, 254)"
+					format="rgb"
+					label="TPL_CASSIOPEIA_BUTTON_SECONDARY_COLOR_LABEL"
+				/>
+
+				<field
+					name="btnsecondarycolorh"
+					type="color"
+					parentclass="span-3-inline stack"
+					default="rgb(254, 254, 254)"
+					format="rgb"
+					label="TPL_CASSIOPEIA_BUTTON_SECONDARY_HOVER_COLOR_LABEL"
+				/>
 				<field
 					name="footerbg"
 					type="color"

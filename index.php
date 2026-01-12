@@ -23,6 +23,14 @@ $wa->registerAndUseStyle('colors_custom', 'global/colors.css')
         --btnbgh: ' . $this->params->get('btnbgh') . ';
         --btncolor: ' . $this->params->get('btncolor') . ';
         --btncolorh: ' . $this->params->get('btncolorh') . ';
+        --btninfobg: ' . $this->params->get('btninfobg') . ';
+        --btninfobgh: ' . $this->params->get('btninfobgh') . ';
+        --btninfocolor: ' . $this->params->get('btninfocolor') . ';
+        --btninfocolorh: ' . $this->params->get('btninfocolorh') . ';
+        --bthsecondarybg: ' . $this->params->get('bthsecondarybg') . ';
+        --bthsecondarybgh: ' . $this->params->get('bthsecondarybgh') . ';
+        --bthsecondarycolor: ' . $this->params->get('bthsecondarycolor') . ';
+        --bthsecondarycolorh: ' . $this->params->get('bthsecondarycolorh') . ';
         --footerbg: ' . $this->params->get('footerbg') . ';
         --footercolor: ' . $this->params->get('footercolor') . ';
         --headerbg: ' . $this->params->get('headerbg') . ';
