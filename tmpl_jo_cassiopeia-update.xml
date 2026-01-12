@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+	<update>
+		<name>JO's Cassiopeia child template</name>
+		<description>JO's Cassiopeia is a template child of standard Cassiopeia template</description>
+		<element>jo_cassiopeia</element>
+		<type>template</type>
+		<client>site</client>
+		<version>1.0.0</version>
+		<infourl title="JO Custom Code">http://www.jltryoen.fr</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/JLTRY/jo_cassiopeia/releases/download/v1.0.0/tmpl_jo_cassiopeia-1.0.0.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>Stable</tag>
+		</tags>
+		<maintainer>JL TRYOEN</maintainer>
+		<maintainerurl>http://www.jltryoen.fr</maintainerurl>
+		<php_minimum>8.0</php_minimum>
+		<targetplatform name="joomla" version="(4\.[01234]|5\.[01234]|6\.[0])"/>
+		<sha256>C2BDFCAE013F7887879B974B731EA1EDFD4F7825B5CC92A62C5E61382BC51DB7</sha256>
+		<sha384>923D61226F4AA4477342B912AC814015CF2CB064265A706711EB34373FE5DCF9F083A896E7CF0B6CCFF389E0B35C62F5</sha384>
+		<sha512>D76C0AEBEA1B482833536BE0F901688B5287A01B9CA5255AF096C10F3150446C98A6ED996C2E751F828D31B020344106958AEC6D28CFCAA1DB13734571956267</sha512>
+	</update>
+</updates>
+

@@ -47,6 +47,9 @@
 		<language tag="en-GB">en-GB/en-GB.tpl_jo_cassiopeia.ini</language>
 		<language tag="en-GB">en-GB/en-GB.tpl_jo_cassiopeia.sys.ini</language>
 	</languages>
+	<updateservers>
+       <server type="extension" priority="1" name="JO's Template">https://raw.githubusercontent.com/JLTRY/jo_cassiopeia/master/tmpl_jo_cassiopeia-update.xml</server>
+    </updateservers>
 	<config>
 		<fields name="params">
 			<fieldset name="advanced">
