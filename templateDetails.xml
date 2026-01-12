@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="template" client="site" method="upgrade">
 	<name>jo_cassiopeia</name>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<creationDate>December 2025</creationDate>
 	<author>JL TRYOEN</author>
 	<authorEmail>postmaster@jltryoen.fr</authorEmail>

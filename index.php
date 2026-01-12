@@ -27,10 +27,10 @@ $wa->registerAndUseStyle('colors_custom', 'global/colors.css')
         --btninfobgh: ' . $this->params->get('btninfobgh') . ';
         --btninfocolor: ' . $this->params->get('btninfocolor') . ';
         --btninfocolorh: ' . $this->params->get('btninfocolorh') . ';
-        --bthsecondarybg: ' . $this->params->get('bthsecondarybg') . ';
-        --bthsecondarybgh: ' . $this->params->get('bthsecondarybgh') . ';
-        --bthsecondarycolor: ' . $this->params->get('bthsecondarycolor') . ';
-        --bthsecondarycolorh: ' . $this->params->get('bthsecondarycolorh') . ';
+        --btnsecondarybg: ' . $this->params->get('btnsecondarybg') . ';
+        --btnsecondarybgh: ' . $this->params->get('btnsecondarybgh') . ';
+        --btnsecondarycolor: ' . $this->params->get('btnsecondarycolor') . ';
+        --btnsecondarycolorh: ' . $this->params->get('btnsecondarycolorh') . ';
         --footerbg: ' . $this->params->get('footerbg') . ';
         --footercolor: ' . $this->params->get('footercolor') . ';
         --headerbg: ' . $this->params->get('headerbg') . ';

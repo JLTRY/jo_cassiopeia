@@ -20,7 +20,8 @@
       "type": "script",
        "uri": "metismenu.js",
       "dependencies": [
-        "bootstrap.dropdown"
+        "bootstrap.dropdown",
+        "bootstrap.tab"
       ]
     }
   ]

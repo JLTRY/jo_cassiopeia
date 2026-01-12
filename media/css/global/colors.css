@@ -122,13 +122,13 @@ li.metismenu-item > a {
 }
 
 .btn-secondary {
-  background-color: var(--btnsecondarybg);
-  border-color: var(--btnsecondarybg);
-  color: var(--btnsecondarycolor);
+  --btn-color: var(--btnsecondarycolor);
+  --btn-border-color: var(--btnsecondarybg);
+  --btn-bg: var(--btnsecondarybg);
 }
 
 .btn-secondary:hover {
-  background-color: var(--btnsecondaybgh);
+  background-color: var(--btnsecondarybgh);
   border-color: var(--btnsecondarybgh);
   color: var(--btnsecondarycolorh);
 }
