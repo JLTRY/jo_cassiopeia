@@ -1,0 +1,145 @@
+.css-trycoaching ul,
+.css-trycoaching li
+{
+	list-style: none;
+}
+
+.css-trycoaching input
+{
+	position: absolute;
+	opacity: 0;
+
+}
+
+.css-trycoaching
+{
+	font: normal 11px "Segoe UI", Arial, Sans-serif!important;
+	font-weight:normal !important;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.css-trycoaching a
+{
+	color: #0088CC;
+	text-decoration: none;
+	height: 18px!important;
+}
+
+.css-trycoaching a:hover
+{
+	text-decoration: underline;
+}
+
+.css-trycoaching input + label + ul
+{
+	margin: 0 0 0 22px!important;
+	padding: 0 0 4px 0!important;
+}
+
+
+
+.css-trycoaching input ~ ul
+{
+	display: none;
+}
+
+.css-trycoaching label,
+.css-trycoaching label::before
+{
+	cursor: pointer;
+}
+
+.css-trycoaching input:disabled + label
+{
+	cursor: default;
+	opacity: .6;
+}
+
+.css-trycoaching input:checked:not(:disabled) ~ ul
+{
+	display: block;
+}
+
+.css-trycoaching label,
+.css-trycoaching label::before
+{
+	background: url("icons.png") no-repeat;
+}
+
+.css-trycoaching label,
+.css-trycoaching a,
+.css-trycoaching label::before
+{
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;,
+	vertical-align: middle;
+}
+
+.css-trycoaching label
+{
+	background-position: 18px 0;
+	background-size: 18px;
+}
+
+
+
+.css-trycoaching label::before
+{
+	content: "";
+	width: 16px;
+	margin: 0 22px 0 0;
+	vertical-align: middle;
+	background-position: 0 -32px;
+	background-size: 16px;
+}
+
+.css-trycoaching a.htmlfile
+{
+	background: transparent url(favicon.ico) center left no-repeat;
+	background-size: 16px;
+	padding-left: 20px;
+}
+		
+
+
+.css-trycoaching   a.htmldirectory
+{
+	background: none !important;
+    padding-left: 0px;;	
+}	
+
+.css-trycoaching input:checked  + label::before
+{
+	background-position: 0 -16px;
+	background-size:  16px;
+}
+
+.css-trycoaching [type="radio"] + label:before 
+{
+	background-position: 0 -66px;
+	background-size:  16px;
+}
+
+/* webkit adjacent element selector bugfix */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+	.css-trycoaching 
+	{
+		-webkit-animation: webkit-adjacent-element-selector-bugfix infinite 1s;
+	}
+	
+	@-webkit-keyframes webkit-adjacent-element-selector-bugfix 
+	{
+		from 
+		{ 
+			padding: 0;
+		} 
+		to 
+		{ 
+			padding: 0;
+		}
+	}
+}
