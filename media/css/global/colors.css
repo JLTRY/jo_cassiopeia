@@ -77,8 +77,12 @@ a:focus-visible, .metismenu.mod-menu .metismenu-item > a:focus, .metismenu.mod-m
   background-image: none;
 }
 
-.container-footer a {
-  color: var(--footercolor);
+footer a{
+  color: var(--link-color)!important;
+}
+
+footer a:hover{
+  color: var(--link-hover-color)!important;
 }
 
 .offline-card .header {
