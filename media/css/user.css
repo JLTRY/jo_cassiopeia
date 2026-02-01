@@ -24,7 +24,12 @@
 .slideshowck {
 	padding-top: 30px!important;
 }
-
+div.camera_caption_desc {
+	font-size: 0.95em!important;
+}
+div.camera_caption_title {
+	font-size: 1.0em!important;
+}
 /* SchuWeb_Sitemap component*/
 #xmap ul,
 #xmap li,

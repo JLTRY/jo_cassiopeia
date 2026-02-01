@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @package     Joomla.Site
  * @subpackage  mod_articles_category
@@ -12,27 +11,45 @@ defined('_JEXEC') or die;
 
 use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\CMS\Language\Text;
+use Joomla\CMS\HTML\HTMLHelper;
 
-if (!$list) {
-    return;
+HTMLHelper::_('bootstrap.collapse');
+
+if (!$list)
+{
+	return;
 }
 
+
 ?>
-
-
-    <?php if ($grouped) : ?>
-        <?php foreach ($list as $groupName => $items) : ?>
-        <li>
-            <div class="mod-articles-category-group"><?php echo Text::_($groupName); ?></div>
-            <ul>
-                <?php require ModuleHelper::getLayoutPath('mod_articles_category', $params->get('layout', 'default') . '_items'); ?>
-            </ul>
-        </li>
-        <?php endforeach; ?>
-    <?php else : ?>
+<div class="css-trycoaching accordion" id="accordiontrycoaching">
+<div class="accordion-item">
+<button class="accordion-button collapsed" 
+		data-bs-toggle="collapse" 
+		data-bs-target="#collapseOne" 
+		aria-expanded="true" aria-controls="collapseOne" style="background-color: rgba(0,0,0,.03)">
+<?php echo $module->title ?>
+</button>
+<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordiontrycoaching">
+      <div class="accordion-body">
+		<ul class="mod-articlescategory category-module mod-list accordion-body">	
+			<?php if ($grouped) : ?>
+				<?php foreach ($list as $groupName => $items) : ?>
+				<li>
+					<div class="mod-articles-category-group"><?php echo Text::_($groupName); ?></div>
+					<ul>
+						<?php require ModuleHelper::getLayoutPath('mod_articles_category', $params->get('layout', 'default') . '_items'); ?>
+					</ul>
+				</li>
+				<?php endforeach; ?>
+			<?php else : ?>
         <table class="table-striped table">
-        <?php $items = $list; ?>
-        <?php require ModuleHelper::getLayoutPath('mod_articles_category', $params->get('layout', 'default') . '_items'); ?>
-        </table>
-    <?php endif; ?>
+				<?php $items = $list; ?>
 
+				<?php require ModuleHelper::getLayoutPath('mod_articles_category', $params->get('layout', 'default') . '_items'); ?>
+        </table>
+
+			<?php endif; ?>
+</div>
+</div>
+<br>
