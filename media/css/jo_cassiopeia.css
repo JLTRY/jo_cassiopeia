@@ -31,7 +31,7 @@ ul.nav-tabs > li.metismenu-item {
 
 .metismenu.mod-menu .metismenu-item {
 	align-items: center;
-	padding: .5em .5em;
+	padding: .5em .5em!important;
 }
 .metismenu.mod-menu .mm-toggler::after {
 	border-top: .4em solid;
