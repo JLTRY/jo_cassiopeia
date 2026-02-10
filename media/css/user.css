@@ -24,12 +24,18 @@
 .slideshowck {
 	padding-top: 30px!important;
 }
-div.camera_caption_desc {
-	font-size: 0.95em!important;
+
+
+@media (min-width: 1200px) {
+	div.camera_caption_desc {
+		font-size: 0.95em!important;
+	}
+	div.camera_caption_title {
+		font-size: 1.0em!important;
+	}
 }
-div.camera_caption_title {
-	font-size: 1.0em!important;
-}
+/* end of plugin Slideshow CK */
+
 /* SchuWeb_Sitemap component*/
 #xmap ul,
 #xmap li,
