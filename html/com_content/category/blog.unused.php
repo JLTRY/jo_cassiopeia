@@ -34,27 +34,27 @@ $afterDisplayContent = trim(implode("\n", $results));
 $htag    = $this->params->get('show_page_heading') ? 'h2' : 'h1';
 ?>
 <div class="com-content-category-blog blog">
-	<?php if ($this->params->get('show_page_heading')) : ?>
-		<div class="page-header">
-			<h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
-		</div>
-	<?php endif; ?>
+    <?php if ($this->params->get('show_page_heading')) : ?>
+        <div class="page-header">
+            <h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
+        </div>
+    <?php endif; ?>
 
     <?php if ($this->params->get('show_category_title', 1)) : ?>
     <<?php echo $htag; ?>>
         <?php echo $this->category->title; ?>
     </<?php echo $htag; ?>>
     <?php endif; ?>
-	<?php echo $afterDisplayTitle; ?>
+    <?php echo $afterDisplayTitle; ?>
 
-	<?php if ($this->params->get('show_cat_tags', 1) && !empty($this->category->tags->itemTags)) : ?>
+    <?php if ($this->params->get('show_cat_tags', 1) && !empty($this->category->tags->itemTags)) : ?>
         <?php $this->category->tagLayout = new FileLayout('joomla.content.tags'); ?>
-		<?php echo $this->category->tagLayout->render($this->category->tags->itemTags); ?>
-	<?php endif; ?>
+        <?php echo $this->category->tagLayout->render($this->category->tags->itemTags); ?>
+    <?php endif; ?>
 
-	<?php if ($beforeDisplayContent || $afterDisplayContent || $this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
-		<div class="category-desc clearfix">
-			<?php if ($this->params->get('show_description_image') && $this->category->getParams()->get('image')) : ?>
+    <?php if ($beforeDisplayContent || $afterDisplayContent || $this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
+        <div class="category-desc clearfix">
+            <?php if ($this->params->get('show_description_image') && $this->category->getParams()->get('image')) : ?>
                 <?php echo LayoutHelper::render(
                     'joomla.html.image',
                     [
@@ -62,43 +62,22 @@ $htag    = $this->params->get('show_page_heading') ? 'h2' : 'h1';
                         'alt' => empty($this->category->getParams()->get('image_alt')) && empty($this->category->getParams()->get('image_alt_empty')) ? false : $this->category->getParams()->get('image_alt'),
                     ]
                 ); ?>
-			<?php endif; ?>
-			<?php echo $beforeDisplayContent; ?>
-			<?php if ($this->params->get('show_description') && $this->category->description) : ?>
-				<?php echo HTMLHelper::_('content.prepare', $this->category->description, '', 'com_content.category'); ?>
-			<?php endif; ?>
-			<?php echo $afterDisplayContent; ?>
-		</div>
-	<?php endif; ?>
-	<?php 
-		/*JLoader::register('JComments', JPATH_SITE . '/components/com_jcomments/jcomments.php'); 
-		$language = Factory::getApplication()->getLanguage();
-		$language->load('com_jcomments', JPATH_ADMINISTRATOR);
-		$count = 0;
-		foreach (array_merge($this->lead_items, $this->intro_items, $this->link_items) as $item)
-		{
-			$count += JComments::getCommentsCount($item->id, 'com_content');
-		}
-		if ($count) {
-			echo "<h2>" . Text::_('A_COMMENTS') . "</h2>";
-		}
-		foreach (array_merge($this->lead_items, $this->intro_items, $this->link_items) as $item) {
-			if (JComments::getCommentsCount($item->id, 'com_content')) {
-				echo "<h3>" . $item->title ."</h3>";
-				//echo JComments::getCommentsTree($item->id, 'com_content');
-				//JComments::show($item->id, 'com_content', $item->title);
-				echo JComments::show($item->id, 'com_content', $item->title, true);
-			}
-		}*/
-	?>
-	<?php if (empty($this->lead_items) && empty($this->link_items) && empty($this->intro_items)) : ?>
-		<?php if ($this->params->get('show_no_articles', 1)) : ?>
+            <?php endif; ?>
+            <?php echo $beforeDisplayContent; ?>
+            <?php if ($this->params->get('show_description') && $this->category->description) : ?>
+                <?php echo HTMLHelper::_('content.prepare', $this->category->description, '', 'com_content.category'); ?>
+            <?php endif; ?>
+            <?php echo $afterDisplayContent; ?>
+        </div>
+    <?php endif; ?>
+    <?php if (empty($this->lead_items) && empty($this->link_items) && empty($this->intro_items)) : ?>
+        <?php if ($this->params->get('show_no_articles', 1)) : ?>
             <div class="alert alert-info">
                 <span class="icon-info-circle" aria-hidden="true"></span><span class="visually-hidden"><?php echo Text::_('INFO'); ?></span>
                     <?php echo Text::_('COM_CONTENT_NO_ARTICLES'); ?>
             </div>
-		<?php endif; ?>
-	<?php endif; ?>
+        <?php endif; ?>
+    <?php endif; ?>
 
     <?php if (!empty($this->lead_items)) : ?>
         <div class="com-content-category-blog__items blog-items items-leading <?php echo $this->params->get('blog_class_leading'); ?>">
@@ -112,40 +91,40 @@ $htag    = $this->params->get('show_page_heading') ? 'h2' : 'h1';
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
-<?php 	$introcount = count($this->intro_items);
-	$counter = 0;
-	$this->columns = 2;
-	?>
+<?php     $introcount = count($this->intro_items);
+    $counter = 0;
+    $this->columns = 2;
+    ?>
 
-	 <?php if (!empty($this->intro_items)&& property_exists($this, "columns")) : ?>
-		<?php foreach ($this->intro_items as $key => &$item) : ?>
-			<?php $rowcount = ((int) $key % (int) $this->columns) + 1; ?>
-			<?php if ($rowcount === 1) : ?>
-				<?php $row = $counter / $this->columns; ?>
-				<div class="items-row cols-<?php echo (int) $this->columns; ?> <?php echo 'row-' . $row; ?> row-fluid row clearfix">
-			<?php endif; ?>
-			<div class="col-md-<?php echo round(12 / $this->columns); ?>">
-				<div class="item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
-					itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-					<?php
-					$this->item = &$item;
-					echo $this->loadTemplate('item');
-					?>
-				</div>
-				<!-- end item -->
-				<?php $counter++; ?>
-			</div><!-- end span -->
-			<?php if (($rowcount == $this->columns) or ($counter == $introcount)) : ?>
-				</div><!-- end row -->
-			<?php endif; ?>
-		<?php endforeach; ?>
-	 <?php endif; ?>
+     <?php if (!empty($this->intro_items)&& property_exists($this, "columns")) : ?>
+        <?php foreach ($this->intro_items as $key => &$item) : ?>
+            <?php $rowcount = ((int) $key % (int) $this->columns) + 1; ?>
+            <?php if ($rowcount === 1) : ?>
+                <?php $row = $counter / $this->columns; ?>
+                <div class="items-row cols-<?php echo (int) $this->columns; ?> <?php echo 'row-' . $row; ?> row-fluid row clearfix">
+            <?php endif; ?>
+            <div class="col-md-<?php echo round(12 / $this->columns); ?>">
+                <div class="item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
+                    itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                    <?php
+                    $this->item = &$item;
+                    echo $this->loadTemplate('item');
+                    ?>
+                </div>
+                <!-- end item -->
+                <?php $counter++; ?>
+            </div><!-- end span -->
+            <?php if (($rowcount == $this->columns) or ($counter == $introcount)) : ?>
+                </div><!-- end row -->
+            <?php endif; ?>
+        <?php endforeach; ?>
+     <?php endif; ?>
 
-	<?php if (!empty($this->link_items)) : ?>
-		<div class="items-more">
-			<?php echo $this->loadTemplate('links'); ?>
-		</div>
-	<?php endif; ?>
+    <?php if (!empty($this->link_items)) : ?>
+        <div class="items-more">
+            <?php echo $this->loadTemplate('links'); ?>
+        </div>
+    <?php endif; ?>
 
     <?php if ($this->maxLevel != 0 && !empty($this->children[$this->category->id])) : ?>
         <div class="com-content-category-blog__children cat-children">

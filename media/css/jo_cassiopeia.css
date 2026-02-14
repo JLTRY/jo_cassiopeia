@@ -54,6 +54,10 @@ a
 	text-decoration: none!important;
 }
 
+small, .small {
+	font-size: .8em;
+}
+
 .column-1, .column-2
 {
 	border:solid 1px #ddd;
