@@ -29,6 +29,10 @@ ul.nav-tabs > li.metismenu-item {
 	height: 3px;
 }
 
+figure {
+  margin: 1em;
+}
+
 .metismenu.mod-menu .metismenu-item {
 	align-items: center;
 	padding: .5em .5em!important;

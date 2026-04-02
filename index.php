@@ -12,6 +12,8 @@ defined('_JEXEC') or die;
 
 /** @var Joomla\CMS\Document\HtmlDocument $this */
 $wa = $this->getWebAssetManager();
+$wr = $wa->getRegistry();
+$wr->addTemplateRegistryFile('cassiopeia', 0);
 require JPATH_THEMES . '/cassiopeia/index.php';
 
 // Advanced Color Settings

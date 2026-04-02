@@ -1,4 +1,4 @@
-VERSION = "1.0.4"
+VERSION = "1.0.5"
 PACKAGE = tmpl_jo_cassiopeia
 ZIPFILE = $(PACKAGE)-$(VERSION).zip
 UPDATEFILE = $(PACKAGE)-update.xml

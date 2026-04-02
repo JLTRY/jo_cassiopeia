@@ -31,6 +31,14 @@ $wa->registerAndUseStyle('colors_custom', 'global/colors.css')
         --btnbgh: ' . $this->params->get('btnbgh') . ';
         --btncolor: ' . $this->params->get('btncolor') . ';
         --btncolorh: ' . $this->params->get('btncolorh') . ';
+        --btninfobg: ' . $this->params->get('btninfobg') . ';
+        --btninfobgh: ' . $this->params->get('btninfobgh') . ';
+        --btninfocolor: ' . $this->params->get('btninfocolor') . ';
+        --btninfocolorh: ' . $this->params->get('btninfocolorh') . ';
+        --btnsecondarybg: ' . $this->params->get('btnsecondarybg') . ';
+        --btnsecondarybgh: ' . $this->params->get('btnsecondarybgh') . ';
+        --btnsecondarycolor: ' . $this->params->get('btnsecondarycolor') . ';
+        --btnsecondarycolorh: ' . $this->params->get('btnsecondarycolorh') . ';
         --footerbg: ' . $this->params->get('footerbg') . ';
         --footercolor: ' . $this->params->get('footercolor') . ';
         --headerbg: ' . $this->params->get('headerbg') . ';
@@ -46,11 +54,15 @@ $wa->registerAndUseStyle('colors_custom', 'global/colors.css')
         --h1size: ' . $this->params->get('h1size') . 'rem;
         --h2size: ' . $this->params->get('h2size') . 'rem;
         --h3size: ' . $this->params->get('h3size') . 'rem;
+        --breadcrumb-font-size : ' . $this->params->get('breadcrumb-font-size') . 'rem;
     }');
-$wa->useAsset('style', 'template.cassiopeia.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'))
+   $wa->useAsset('style', 'template.cassiopeia.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'))
     ->useStyle('template.active.language')
     ->useStyle('template.user')
     ->useScript('template.user');
+    $wa->UseStyle('template.jo_cassiopeia.typography')
+    ->UseStyle('template.jo_cassiopeia')
+    ->UseScript('template.jo_cassiopeia');
 $header = Factory::getApplication()->input->getInt('header', 0);
 // Logo file or site title param
 if ($this->params->get('logoFile')) {
