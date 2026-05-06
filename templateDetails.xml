@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="template" client="site" method="upgrade">
 	<name>jo_cassiopeia</name>
-	<version>1.0.5</version>
-	<creationDate>February 10, 2026</creationDate>
+	<version>1.0.6</version>
+	<creationDate>May  6, 2026</creationDate>
 	<author>JL TRYOEN</author>
 	<authorEmail>postmaster@jltryoen.fr</authorEmail>
 	<copyright>(C) 2017 Open Source Matters, Inc.</copyright>
@@ -18,6 +18,9 @@
 		<filename>templateDetails.xml</filename>
 		<folder>html</folder>
 	</files>
+	<media destination="..">
+		<folder>images</folder>
+	</media>
 	<media destination="templates/site/jo_cassiopeia" folder="media">
 		<folder>css</folder>
 		<folder>js</folder>
@@ -93,6 +96,17 @@
 					description="TPL_CASSIOPEIA_TAGLINE_DESC"
 					filter="string"
 					showon="brand:1"
+				/>
+				<field
+					name="faviconFile"
+					type="media"
+					types="images"
+					basePath="/images/jo_cassiopeia"
+					directory="jo_cassiopeia"
+					preview="false"
+					default=""
+					label="TPL_JO_CASSIOPEIA_FAVICON_LABEL"
+					description="TPL_JO_CASSIOPEIA_FAVICON_DESC"
 				/>
 				<field
 					name="fluidContainer"

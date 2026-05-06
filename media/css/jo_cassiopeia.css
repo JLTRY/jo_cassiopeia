@@ -62,7 +62,7 @@ small, .small {
 	font-size: .8em;
 }
 
-.column-1, .column-2
+.blog-item, .column-1
 {
 	border:solid 1px #ddd;
 	-moz-border-radius: 10px;
@@ -72,9 +72,9 @@ small, .small {
 	border-bottom-style:solid;
 	border-left-style:solid;
 	margin-bottom: 10px;
-	padding-left: 15px;
+	padding-left: 5px!important;
 	padding-bottom: 15px;
-	padding-top: 10px;
+	padding-top: 10px!important;
 }
 
 
