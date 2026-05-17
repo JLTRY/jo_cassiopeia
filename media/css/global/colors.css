@@ -72,9 +72,9 @@ a:focus-visible, .metismenu.mod-menu .metismenu-item > a:focus, .metismenu.mod-m
 }
 
 .container-footer {
-  color: var(--footercolor);
-  background-color: var(--footerbg);
-  background-image: none;
+  color: var(--footercolor)!important;
+  background-color: var(--footerbg)!important;
+  background-image: none!important;
 }
 
 footer a{
