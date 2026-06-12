@@ -18,9 +18,10 @@ use Joomla\CMS\Layout\LayoutHelper;
     <tr>
     <td>
 	<?php if ($params->get('link_titles') == 1) : ?>
-		<a class="htmlfile mod-articles-category-title <?php echo $item->active; ?>" href="<?php echo $item->link; ?>">
-			<?php echo $item->title; ?>
-		</a>
+        <?php $attributes = ['class' => 'mod-articles-category-title ' . $item->active]; ?>
+        <?php $link = htmlspecialchars($item->link, ENT_COMPAT, 'UTF-8', false); ?>
+        <?php $title = htmlspecialchars($item->title, ENT_COMPAT, 'UTF-8', false); ?>
+        <?php echo HTMLHelper::_('link', $link, $title, $attributes); ?>
 	<?php else : ?>
 		<?php echo $item->title; ?>
 	<?php endif; ?>
