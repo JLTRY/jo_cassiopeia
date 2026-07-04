@@ -66,6 +66,8 @@ $wa->registerAndUseStyle('colors_custom', 'global/colors.css')
 $header = Factory::getApplication()->input->getInt('header', 0);
 // Logo file or site title param
 if ($this->params->get('logoFile')) {
+    $app = Factory::getApplication('site');
+    $sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
     $logo = HTMLHelper::_('image', Uri::root(false) . htmlspecialchars($this->params->get('logoFile'), ENT_QUOTES), $sitename, ['loading' => 'eager', 'decoding' => 'async'], false, 0);
 } elseif ($this->params->get('siteTitle')) {
     $logo = '<span title="' . $sitename . '">' . htmlspecialchars($this->params->get('siteTitle'), ENT_COMPAT, 'UTF-8') . '</span>';
