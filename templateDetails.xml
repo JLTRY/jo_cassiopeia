@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="template" client="site" method="upgrade">
 	<name>jo_cassiopeia</name>
-	<version>1.0.7</version>
-	<creationDate>June 12, 2026</creationDate>
+	<version>1.0.8</version>
+	<creationDate>July  6, 2026</creationDate>
 	<author>JL TRYOEN</author>
 	<authorEmail>postmaster@jltryoen.fr</authorEmail>
 	<copyright>(C) 2017 Open Source Matters, Inc.</copyright>
