@@ -65,3 +65,9 @@ div.mw-geshi, div.syntaxhighlighter {
 	background-color: #FFFFFF !important!important;
 	font-size: 11px !important;
 }
+
+
+
+header img {
+  box-shadow: 4px 4px 2px #888888;
+}
