@@ -29,7 +29,7 @@ $layoutAttr  = [
     'class' => $imageClass,
 ];
 ?>
-<?php if (isset($images->image_intro_caption) && $images->image_intro_caption !== '') : ?>
+<?php if (isset($images->image_intro_caption)) : ?>
     <figure class="<?php echo $this->escape($figureClass); ?> item-image">
 <?php endif; ?>
 
@@ -41,7 +41,7 @@ $layoutAttr  = [
         <?php echo LayoutHelper::render('joomla.html.image', $layoutAttr); ?>
     <?php endif; ?>
 
-<?php if (isset($images->image_intro_caption) && $images->image_intro_caption !== '') : ?>
+<?php if (isset($images->image_intro_caption)) : ?>
         <figcaption class="caption"><?php echo $this->escape($images->image_intro_caption); ?></figcaption>
 
     </figure>
