@@ -112,9 +112,35 @@ small, .small {
 }
 /* end of Offcanvas overwrite */
 
+/* Mobile: show the menu row above the brand/title block */
+@media (max-width: 991.98px) {
+  .container-header {
+    display: flex;          /* makes `order` work */
+    flex-wrap: wrap;
+  }
 
+  .container-header .container-nav {
+    order: -1;
+    flex-basis: 100%;
+  }
+}
 
+@media (max-width: 991.98px) {
+  .container-header .container-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* hamburger left, login right */
+  }
 
+	.container-header .header-login .btn {
+	gap: 0.4rem;
+	align-items: center;
+	}
+}
 
-
+@media (min-width: 992px) {
+	.header-login >.btn {
+		visibility: hidden;
+	}
+}
 
