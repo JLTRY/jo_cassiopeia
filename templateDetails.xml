@@ -18,12 +18,11 @@
 		<filename>templateDetails.xml</filename>
 		<folder>html</folder>
 	</files>
-	<media destination="..">
-		<folder>images</folder>
-	</media>
 	<media destination="templates/site/jo_cassiopeia" folder="media">
 		<folder>css</folder>
 		<folder>js</folder>
+		<folder>images</folder>
+		<filename>index.html</filename>
 	</media>
 	<positions>
 		<position>topbar</position>
@@ -101,10 +100,9 @@
 					name="faviconFile"
 					type="media"
 					types="images"
-					basePath="/images/jo_cassiopeia"
-					directory="jo_cassiopeia"
+					directory="local-media:/templates/site/jo_cassiopeia/images"
 					preview="false"
-					default=""
+					default="media/templates/site/jo_cassiopeia/images/joomla-favicon.svg"
 					label="TPL_JO_CASSIOPEIA_FAVICON_LABEL"
 					description="TPL_JO_CASSIOPEIA_FAVICON_DESC"
 				/>
