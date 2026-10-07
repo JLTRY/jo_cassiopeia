@@ -138,9 +138,4 @@ small, .small {
 	}
 }
 
-@media (min-width: 992px) {
-	.header-login >.btn {
-		visibility: hidden;
-	}
-}
 
