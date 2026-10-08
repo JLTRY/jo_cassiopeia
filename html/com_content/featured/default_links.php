@@ -23,7 +23,7 @@ use Joomla\Component\Content\Site\Helper\RouteHelper;
 		<tr>
 			<td>
 				<a href="<?php echo Route::_(RouteHelper::getArticleRoute($item->slug, $item->catid, $item->language)); ?>">
-					<?php echo $item->title; ?></a>
+				<?php echo $this->escape($item->title); ?></a>
 			</td>
 			<td>
 			<span class="icon-calendar icon-fw" aria-hidden="true"></span>

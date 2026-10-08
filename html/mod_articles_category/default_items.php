@@ -46,7 +46,7 @@ use Joomla\CMS\Layout\LayoutHelper;
 
 	<?php if ($item->displayDate) : ?>
 		<td>
-			<span class="fa fa-calendar"></span><?php echo $item->displayDate; ?>
+			<span class="fa fa-calendar"></span><?php echo htmlspecialchars($item->displayDate, ENT_COMPAT, 'UTF-8'); ?>
 		</td>
 	<?php endif; ?>
 

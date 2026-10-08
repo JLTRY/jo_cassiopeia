@@ -25,6 +25,7 @@ $listDirn  = $this->escape($this->state->get('list.direction'));
 ?>
 <div class="com-tags-compact__items">
     <form action="<?php echo htmlspecialchars(Uri::getInstance()->toString()); ?>" method="post" name="adminForm" id="adminForm" class="com-tags-tag-list__items">
+        <?php if ($this->params->get('filter_field') || $this->params->get('show_pagination_limit')) : ?>
         <?php if ($this->params->get('filter_field')) : ?>
             <div class="com-tags-tag__filter btn-group">
                 <label class="filter-search-lbl visually-hidden" for="filter-search">
@@ -35,7 +36,7 @@ $listDirn  = $this->escape($this->state->get('list.direction'));
                     name="filter-search"
                     id="filter-search"
                     value="<?php echo $this->escape($this->state->get('list.filter')); ?>"
-                    class="inputbox" onchange="document.adminForm.submit();"
+                        class="inputbox"
                     placeholder="<?php echo Text::_('COM_TAGS_TITLE_FILTER_LABEL'); ?>"
                 >
                 <button type="submit" name="filter_submit" class="btn btn-primary"><?php echo Text::_('JGLOBAL_FILTER_BUTTON'); ?></button>
@@ -49,7 +50,12 @@ $listDirn  = $this->escape($this->state->get('list.direction'));
                 </label>
                 <?php echo $this->pagination->getLimitBox(); ?>
             </div>
+            <?php endif; ?>
+
+            <input type="hidden" name="limitstart" value="">
+            <input type="hidden" name="task" value="">
         <?php endif; ?>
+    </form>
 
         <?php if (empty($this->items)) : ?>
             <div class="alert alert-info">
@@ -114,20 +120,4 @@ $listDirn  = $this->escape($this->state->get('list.direction'));
             </table>
         <?php endif; ?>
 
-        <?php // Add pagination links ?>
-        <?php if (($this->params->def('show_pagination', 2) == 1 || ($this->params->get('show_pagination') == 2)) && ($this->pagination->pagesTotal > 1)) : ?>
-            <div class="com-tags-tag-list__pagination w-100">
-                <?php if ($this->params->def('show_pagination_results', 1)) : ?>
-                    <p class="counter float-end pt-3 pe-2">
-                        <?php echo $this->pagination->getPagesCounter(); ?>
-                    </p>
-                <?php endif; ?>
-                <?php echo $this->pagination->getPagesLinks(); ?>
-            </div>
-        <?php endif; ?>
-        <input type="hidden" name="filter_order" value="<?php echo $listOrder; ?>">
-        <input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn; ?>">
-        <input type="hidden" name="limitstart" value="">
-        <input type="hidden" name="task" value="">
-    </form>
 </div>
