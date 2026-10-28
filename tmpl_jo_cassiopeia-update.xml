@@ -6,10 +6,10 @@
 		<element>jo_cassiopeia</element>
 		<type>template</type>
 		<client>site</client>
-		<version>1.0.9</version>
+		<version>1.0.10</version>
 		<infourl title="JO Custom Code">http://www.jltryoen.fr</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/JLTRY/jo_cassiopeia/releases/download/v1.0.9/tmpl_jo_cassiopeia-1.0.9.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/JLTRY/jo_cassiopeia/releases/download/v1.0.10/tmpl_jo_cassiopeia-1.0.10.zip</downloadurl>
 		</downloads>
 		<tags>
 			<tag>Stable</tag>
@@ -18,9 +18,9 @@
 		<maintainerurl>http://www.jltryoen.fr</maintainerurl>
 		<php_minimum>8.0</php_minimum>
 		<targetplatform name="joomla" version="(4\.[01234]|5\.[01234]|6\.[012])"/>
-		<sha256>FC3D26E2A87BE330C2EF7BCF3CF8754C7A301BE8C4D8E2D217BB3FDC00607118</sha256>
-		<sha384>520AE98B46E1300F31661B156336AD4FF95012412F0B4FF0752C4DF51B541682986F243995A2EFD40E9E498C6FA1F7C4</sha384>
-		<sha512>2AFA9EF19C3E9DDD2AB600F69AA3F0A33EC4B6BD64260A0257487F9762807AC5AA35308C6E76FA7172AE0AC59E0BE1266B01E3A371B7CB0CB4DF63B9D3048364</sha512>
+		<sha256>55F873258857768788B81D49D0CC1A88A6645FB7BECA433A70378A87A1359998</sha256>
+		<sha384>7143461C6CDA22A6ADBBE0332BD60D375A6A5AC3E7AA2545817CCFAB7FC6743FAD408408E2706433EB32EBBB5C0DA097</sha384>
+		<sha512>C35A57A602EACD570D04705332F7F7913D2862B3965B43D0520423EADB1225C39DA11B394A3833AAAEFAFD45B7819229EA597A6E5A0272A8B2D4125542268858</sha512>
 	</update>
 </updates>
 

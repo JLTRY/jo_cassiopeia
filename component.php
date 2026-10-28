@@ -91,7 +91,7 @@ if ($this->params->get('logoFile')) {
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="col-md-9">
-				<a class="navbar-brand pull-left" href="<?php echo JURI::base(); ?>"><?php echo $logo; ?></a>
+				<a class="navbar-brand pull-left" href="<?php echo Uri::base(); ?>"><?php echo $logo; ?></a>
 			</div>
 			<div class="col-md-1">
 				<jdoc:include type="modules" name="head" style="none" />

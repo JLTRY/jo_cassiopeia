@@ -67,7 +67,7 @@ small, .small {
 	font-size: .8em;
 }
 
-.blog-item, .column-1
+.blog-item, .column-1, .column-2, .column-3
 {
 	border:solid 1px #ddd;
 	-moz-border-radius: 10px;
